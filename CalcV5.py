@@ -25,6 +25,6 @@ elif escolha == '4':
     resultado = Divisão(num1, num2)
     print("resultado:",resultado)
     
-elif escolha == '5'
+elif escolha == '5':
     resultado = Porcentagem(num1, num2)
     print("resultado:",resultado, "%")
