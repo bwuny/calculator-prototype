@@ -28,7 +28,7 @@ Esta é uma calculadora de protótipo que permite realizar operações matemáti
 	```
 3. Execute a calculadora
 	```bash
-	python calculator.py
+	python calculator-prototype.py
 	```
 4. Siga as instruções no console para realizar cálculos.
 
