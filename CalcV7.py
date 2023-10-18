@@ -1,47 +1,64 @@
+def is_not_zero(num2):return num2 != 0     
+
      # Define as operações
-def Adição(x, y): return x + y
-def Subtração(x, y): return x - y
-def Multiplicação(x, y): return x * y
-def Divisão(x, y): return x / y 
-def Porcentagem(num1, num2): return (num1 / 100) * num2
-def Média(x, y, z): return (x + y + z) / 3
-
-	# Get user input for num1 and num2
-	
-menu = {1: "adição", 2: "Subtração", 3: "Multiplicação", 4: "Divisão", 5 :"Porcentagem", 6 :"Média"}
-	
-num1 = float(input("Digite o primeiro número: "))
-num2 = float(input("Digite o segundo número: "))
-while True:   
-    # Solicita ao usuário que escolha uma opção
-    print ("Escolha uma operação:")
-    for chave, valor in menu.items():
-        print (f"{chave}: {valor}")
-        
-    escolha = input("Escolha (1/2/3/4/5/6): ")
-    
-    # Condições especiais
-    
-    if escolha == '6':
-        num3 = float(input("Número 3: "))
-        resultado = Média(num1, num2,num3)
-        print("resultado:", resultado)
-        
-    if escolha == '4':
-        if num2 != 0:
-           resultado_divisão = Divisão(num1, num2)
-        print("resultado:", resultado_divisão)
-    else:print("Erro: Não pode ser dividido por zero")
-
-       
-    if escolha == '5':
-        if num2 != 0:
-            resultado_porcentagem = Porcentagem(num1, num2) 
-            print("resultado:",resultado_porcentagem, "%")
+def Adição(num1, num2): 
+    return num1 + num2
+def Subtração(num1, num2): 
+    return num1 - num2
+def Multiplicação(num1, num2): 
+    return num1 * num2
+def Divisão(num1, num2): 
+    if is_not_zero(num2): 
+        return num1 / num2 
     else:
-        print("o segundo número deve ser maior que zero")
-        
-    outro_calculo = input('Outro cálculo? (sim ou não): ')
-    if not outro_calculo.lower().startswith('s'):
+        return "Divisão por zero não é permitida."
+    
+def Porcentagem(num1, num2): 
+    if is_not_zero(num2): 
+        return (num1 / 100) * num2
+    else: 
+        return "Porcentagem de zero não é permitida."
+    
+def Média(num1, num2, num3):
+    return (num1 + num2 + num3) / 3
+
+    escolha = input("Escolha a operação (1-6): ")        
+   
+   
+operations = {
+        '1': Adição,
+        '2': Subtração,
+        '3': Multiplicação,
+        '4': Divisão,
+        '5': Porcentagem,
+        '6': Média}
+
+while True:
+    
+    menu={1:"Adição", 2:"Subtração", 3:"Multiplicação",4:"Divisão",5:"Porcentagem", 6:"Média"}
+    
+    escolha = input("Escolha a operação (1-6): ")
+    
+    num1 = float(input("Digite o primeiro número: "))
+    num2 = float(input("Digite o segundo número: "))  
+    
+    if escolha in operations:
+        num1 = float(input("Digite o primeiro número: "))
+        num2 = float(input("Digite o segundo número: "))
+        if escolha == '6':
+            num3 = float(input("Digite o terceiro número: "))
+            resultado = operations[escolha](num1, num2) 
+            
+        if escolha != '6':
+            operations[escolha](num1, num2, num3)
+        if escolha == '5' and resultado != "Porcentagem de zero não é permitida":
+            print(f"Resultado: {resultado}%")
+        else:
+            print(f"Resultado: {resultado}")
+    else:
+        print("Operação inválida. Escolha uma operação válida (1-6).")
+    outro_calculo = input('Outro cálculo? (sim ou não): ').lower()
+    if outro_calculo != 'sim':
         print('Até logo!')
         break
+
