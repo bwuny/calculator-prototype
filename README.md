@@ -1,38 +1,35 @@
 # Calculator prototype
 
-Uma calculadora simples desenvolvida em Python.
+A simple calculator developed in Python.
 
-## Visão Geral
+## Overview
 
-Esta é uma calculadora de protótipo que permite realizar operações matemáticas básicas, como adição, subtração,multiplicação, divisão, porcentagem e média aritmética. 
-É um projeto simples criado para fins de aprendizado e demonstração.
+This is a prototype calculator that allows you to perform basic mathematical operations such as addition, subtraction, multiplication, division, percentage, and arithmetic mean. It is a simple project created for learning and demonstration purposes.
 
-## Funcionalidades
+## Features
 
-- Adição
-- Subtração
-- Multiplicação
-- Divisão
-- Porcentagem
-- Média aritmética
+- Addition
+- Subtraction
+- Multiplication
+- Division
+- Percentage
+- Arithmetic Mean
 
-## Como Usar
+## Usage
 
-1. Clone o repositório para o seu computador:
+1. Clone the repository to your computer:
    ```bash
    git clone https://github.com/bwuny/calculator-prototype.git
    ```
-2. Navegue até o diretório do projeto:
+2. Navigate to the project directory:
 	```bash
 	cd calculator-prototype
 	```
-3. Execute a calculadora
+3. Run the calculator:
 	```bash
 	python calculator-prototype.py
 	```
 4. Siga as instruções no console para realizar cálculos.
 
-
-## Licença
-Este projeto está licenciado sob a Licença MIT.
-
+## License
+This project is licensed under the MIT License.
