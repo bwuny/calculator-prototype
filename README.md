@@ -4,7 +4,7 @@ A simple calculator developed in Python.
 
 ## Overview
 
-This is a prototype calculator that allows you to perform basic mathematical operations such as addition, subtraction, multiplication, division, percentage, and arithmetic mean. It is a simple project created for learning and demonstration purposes.
+This is a prototype calculator that allows you to perform basic mathematical operations such as addition, subtraction, multiplication, division, percentage, and arithmetic mean. It's a simple project created for learning and demonstration purposes.
 
 ## Features
 
@@ -29,7 +29,7 @@ This is a prototype calculator that allows you to perform basic mathematical ope
 	```bash
 	python calculator-prototype.py
 	```
-4. Siga as instruções no console para realizar cálculos.
+4. Follow the instructions on the console to perform calculations.
 
 ## License
 This project is licensed under the MIT License.
