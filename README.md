@@ -34,5 +34,5 @@ This is a prototype calculator that allows you to perform basic mathematical ope
 ## License
 This project is licensed under the MIT License.
 
-## Contributiins
+## Contributions
 - Yezzipe, major role helping me figure out + testing my messy code, thank you very much.
